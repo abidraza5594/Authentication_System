@@ -1,0 +1,9 @@
+{% extends 'app1/base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+
+{% block body %}
+{{user.user_profile.user_name}}<br>
+{{user.user_profile.user_location}}
+<img src="{{user.user_profile.user_image.url}}" width="100px" height="100px" alt="img">
+{% endblock body %}

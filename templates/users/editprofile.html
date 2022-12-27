@@ -1,0 +1,14 @@
+{% extends 'app1/base.html' %}
+{% block title %}Edit Profile{% endblock title %}
+
+{% block body %}
+<form id="update_user_form" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <img src="{{ user.user_profile.user_image.url }}" />
+    <br />
+    <input type="SUBMIT" name="submit" value="Update"/>
+</form>
+
+
+{% endblock body %}

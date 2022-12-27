@@ -1,0 +1,10 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    {% if messages  %}
+        {% for msg in messages %}
+            {{msg}}
+        {% endfor %}
+    {% endif %}
+    <input type="submit" value="Login">
+</form>
